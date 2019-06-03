@@ -1,0 +1,39 @@
+<footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+
+      <div class="footer-col">
+        <ul class="social-media-list">
+          
+          {% if site.github_username %}
+          <li display="inline-block">
+              <a href="https://github.com/{{ include.username }}"><span class="fab fa-github"></span></a>
+          </li>
+          {% endif %}
+
+          {% if site.telegram_link %}
+          <li display="inline-block">
+              <a href="https://t.me/joinchat/{{ site.telegram_link }}"><span class="fab fa-telegram-plane"></span></a>
+          </li>
+          {% endif %}
+
+          {% if site.facebook %}
+          <li display="inline-block">
+            <a href="facebook"><span class="fab fa-facebook"></span></a>
+          </li>
+          {% endif %}
+
+          {% if site.email %}
+          <li display="inline-block">
+            <a href="mailto:{{ site.email }}"><span class="fa fa-envelope"></span></a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+</footer>

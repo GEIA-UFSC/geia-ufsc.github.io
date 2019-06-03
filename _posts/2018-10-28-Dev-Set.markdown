@@ -1,0 +1,25 @@
+---
+layout: post
+title: "Developer Setup"
+header:
+date: 2018-10-28 00:00:00 -0500
+categories: DevOps
+author: Bruno Machado Pacheco
+medium: jupyter
+link: https://api.github.com/repos/GEIA-UFSC/dev-setup/contents/Setup.html?ref=master
+moreexists: true
+lang: en
+---
+<div>
+    {% if page.medium == 'jupyter' %}
+        {% include jupyter.html link=page.link %}
+    {% elsif page.medium == 'gslides' %}
+        {% include gslides.html link=page.link %}
+    {% else %}
+        <hr>
+        <h3>Ops!</h3>
+        <p>No data yet!</p>
+        <hr>
+        <br>
+    {% endif %}
+</div>

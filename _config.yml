@@ -1,0 +1,29 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title:
+  en: GEIA @UFSC
+  pt: GEIA @UFSC
+email: your-email@domain.com
+description:
+  en: Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+  pt: Écrivez une super description de votre nouveau site ici. Vous pouvez modifier cette ligne dans _config.yml. Elle apparaîtra dans la balise meta description (pour les résultats sur Google) et dans le fil RSS feed.xml.
+index:
+  en:
+  pt: inicio.html
+feed:
+  en: /feed.xml
+  pt: /feed.xml
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "geia-ufsc" # the base hostname & protocol for your site
+telegram_link: KRVDdhN0o0Gwky2NftJ6XA
+github_username: GEIA-UFSC
+facebook: GEIA-UFSC
+
+# Build settings
+markdown: kramdown
