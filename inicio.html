@@ -4,27 +4,86 @@ ref: index
 lang: pt
 ---
 
-<div class="home">
-  <div class="description">
-    <h1>Nós somos um grupo em estudos de Inteligência Artifical da UFSC</h1>
-    <p>O GEIA é organizado por estudantes da Universidade Federal de Santa Catarina tem como objetivo promover aprendizado em Inteligência Artificial e Machine Learning. Realizamos encontros periódicos nos quais são abordados aspectos teóricos e práticos nas áreas, sob diversos graus de profundidade. O grupo hoje é coordenado por estudantes de engenharia da UFSC, porém acolhe participantes de quaisquer contextos e graus de familiaridade com a área.</p>
+<section class="hero is-fullheight">
+  <div class="container horizontal-center">
+      <div class="hero-head">
+          <div class="horizontal-center has-text-centered is-hidden-desktop small-logo">
+              <img src="/geia_logo.png"></img>
+          </div>
+      </div>
+      <div class="hero-body">
+          <div class="container welcome-width">
+              <div class="tile is-ancestor">
+                  <div class="tile is-parent is-vertical">
+                      <div class="tile is-child">
+                      </div>
+                      <div class="tile is-child has-text-left">
+                          <h1 class="welcome thick-text">
+                            Somos um grupo em estudos de Inteligência Artifical da UFSC
+                          </h1>
+                          </br>
+                          <h2>
+                            Organizamos reuniões periódicas onde se discutem tópicos práticos e teóricos que circumdem ciência de dados e aprendizado de máquina.
+                          </h2>
+                          <br>
+                          <div>
+                              {{ page.aboutus }}
+                          </div>
+                      </div>
+                      <div class = "tile is-child">
+                          <div class = "columns">
+                              <div class = "column has-text-left">
+                                  <h3 class = "underline">
+                                      Current Projects
+                                  </h3>
+                                  <ul class="plus">
+                                      Coming Soon!
+                                      <!--<li><a href="{{ page.project1link }}">{{ page.project1 }}</a>-->
+                                      <!--</li>-->
+                                      <!--<li><a href="{{ page.project2link }}">{{ page.project2 }}</a></li>-->
+                                  </ul>
+                              </div>
+                              <div class = "column has-text-left">
+                                  <h3 class = "underline">
+                                      Recent Lecture
+                                  </h3>
+                                  <ul>
+                                      {% assign post = site.posts.first %}
+                                      <li>
+                                          <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> </br> <i>given by</i> </br>
+                                      </li>
+                                  </ul>
+                                  {{ post.author }}
+                              </div>
+                              <div class = "column has-text-left">
+                                  <h3 class = "underline">
+                                      Stay Connected
+                                  </h3>
+                                  <ul>
+                                      <li><a href="https://gtagency.slack.com"><i class="fa fa-slack" aria-hidden="true"></i> Slack
+                                          </a> for updates/discussions.
+                                      </li>
+                                      <li><a href="https://facebook.com/gtagency"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook </a> for meeting announcements.
+                                      </li>
+                                      <li>
+                                          <a href="https://drive.google.com/drive/folders/0B2hjlO2NzFMqNWo4UThpVW5kSGM"><i class="fa fa-google" aria-hidden="true"></i> Google Drive</a> for lectures and other resources.
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class = "tile is-parent is-vertical is-hidden-touch is-5">
+                      <div class = "tile is-child">
+                      </div>
+                      <div class = "tile is-child">
+                          <img src="/geia_logo.png" style="margin-left: 30px;" class="logo"></img>
+                      </div>
+                      <div class = "tile is-child">
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
   </div>
-  <div class="Logo">
-    <img src="./geia_logo.png">
-  </div>
-
-  <div class="projects">
-    <h2>Projetos atuais</h2>
-    <ul>
-      <li>Em breve</li>
-    </ul>
-  </div>
-  
-  <div class="talks">
-    <h2>Última apresentação</h2>
-      <ul>
-        <p>Setting up your data science environment</p>
-        <p>Apresentado por: Bruno Machado</p>
-      </ul>
-  </div>
-</div>
+</section>

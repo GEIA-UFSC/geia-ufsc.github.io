@@ -3,7 +3,7 @@ layout: post
 title: "Imbalanced learning"
 header:
 date: 2018-09-10 00:00:00 -0500
-categories: DevOps
+categories: Data Science
 author: Artur Back de Luca
 medium: jupyter
 link: https://api.github.com/repos/GEIA-UFSC/imbalanced-learning/contents/presentation.slides.html?ref=master

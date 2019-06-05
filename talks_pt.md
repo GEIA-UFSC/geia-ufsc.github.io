@@ -5,22 +5,48 @@ ref: talks
 lang: pt
 ---
 
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+<div>
+    <div class = "columns">
+        <div class = "column is-6 is-pulled-left padded is-hidden-mobile">
+            {% assign post = site.posts.first %}
+            <h1 class="thick-text">{{ post.title }}</h1>
+            <h3><i>apresentada por</i> {{ post.author }} </h3>
+            <br>
+            {{ post.content }}
+        </div>
+        <div class = "column">
+        </div>
+        <div class = "column is-5 padded">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="thick-text">Apresentações realizadas</h1>
+                </div>
+                <div class="column is-2" style="display:flex">
+                    <div class="has-text-centered" style="width:100%; align-self:center">
+                        <p><a id="continuelink" href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class = "scrollable-parent">
+                <div class = "scrollable-child">
+                    <ul style="padding-bottom: 50px; margin-bottom: 50px;">
+                        {% for post in site.posts %}
+                        <li>
+                            <h2><a href="{{ post.url | prepend: site.baseurl }}">
+                                {% if post.video %}
+                                  <i class='fa fa-video-camera' aria-hidden='true' style='font-size: 0.8em !important;'></i> 
+                                {% endif %}
+                                {{ post.title }}</a></h2>
+                            <h4 style="display: inline-block;"><i>{{ post.author}}</i></h4>
+                            <small>
+                                <p style="display: inline-block;">&nbsp;|&nbsp;{{ post.date | date: "%-d/%m/%Y" }}</p>
+                            </small>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <div class = "gradient-fade"></div>
+        </div>
+    </div>
 </div>
