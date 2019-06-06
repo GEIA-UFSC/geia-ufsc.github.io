@@ -1,21 +1,20 @@
 ---
 layout: post
-title: "Imbalanced learning"
-header:
-date: 2018-09-10 00:00:00 -0500
+title: Imbalanced learning
+date: 2018-09-10
 categories: Data Science
 author: Artur Back de Luca
 medium: jupyter
-link: https://api.github.com/repos/GEIA-UFSC/imbalanced-learning/contents/presentation.slides.html?ref=master
+url: https://api.github.com/repos/GEIA-UFSC/imbalanced-learning/contents/presentation.slides.html?ref=master
 moreexists: true
 lang: en
 ---
 
 <div>
     {% if page.medium == "jupyter" %}
-        {% include jupyter.html link=page.link %}
+        {% include jupyter.html link=page.url %}
     {% elsif page.medium == "gslides" %}
-        {% include gslides.html link=page.link %}
+        {% include gslides.html link=page.url %}
     {% else %}
         {% include nodata.html %}
     {% endif %}
