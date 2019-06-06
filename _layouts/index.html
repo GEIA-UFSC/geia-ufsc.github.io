@@ -1,7 +1,5 @@
 ---
 layout: default
-ref: index
-lang: pt
 ---
 
 <section class="hero is-fullheight">
@@ -18,13 +16,10 @@ lang: pt
                       <div class="tile is-child">
                       </div>
                       <div class="tile is-child has-text-left">
-                          <h1 class="welcome thick-text">
-                            Somos um grupo em estudos de Inteligência Artifical da UFSC
+                          <h1 class="is-large">
+                            {{ page.short_description }}
                           </h1>
                           </br>
-                          <h2>
-                            Organizamos reuniões periódicas onde se discutem tópicos práticos e teóricos que circumdem ciência de dados e aprendizado de máquina.
-                          </h2>
                           <br>
                           <div>
                               {{ page.aboutus }}
@@ -34,41 +29,23 @@ lang: pt
                           <div class = "columns">
                               <div class = "column has-text-left">
                                   <h3 class = "underline">
-                                      Current Projects
+                                     {{ page.projects_title }}
                                   </h3>
                                   <ul class="plus">
-                                      Coming Soon!
-                                      <!--<li><a href="{{ page.project1link }}">{{ page.project1 }}</a>-->
-                                      <!--</li>-->
-                                      <!--<li><a href="{{ page.project2link }}">{{ page.project2 }}</a></li>-->
+                                    {{ page.projects }}
                                   </ul>
                               </div>
                               <div class = "column has-text-left">
                                   <h3 class = "underline">
-                                      Recent Lecture
+                                      {{ page.talk}}
                                   </h3>
                                   <ul>
                                       {% assign post = site.posts.first %}
                                       <li>
-                                          <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> </br> <i>given by</i> </br>
+                                          <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> </br> <i>{{ page.given_by }}</i> {{ post.author }}</br>
                                       </li>
                                   </ul>
-                                  {{ post.author }}
-                              </div>
-                              <div class = "column has-text-left">
-                                  <h3 class = "underline">
-                                      Stay Connected
-                                  </h3>
-                                  <ul>
-                                      <li><a href="https://gtagency.slack.com"><i class="fa fa-slack" aria-hidden="true"></i> Slack
-                                          </a> for updates/discussions.
-                                      </li>
-                                      <li><a href="https://facebook.com/gtagency"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook </a> for meeting announcements.
-                                      </li>
-                                      <li>
-                                          <a href="https://drive.google.com/drive/folders/0B2hjlO2NzFMqNWo4UThpVW5kSGM"><i class="fa fa-google" aria-hidden="true"></i> Google Drive</a> for lectures and other resources.
-                                      </li>
-                                  </ul>
+                                  
                               </div>
                           </div>
                       </div>
