@@ -15,7 +15,7 @@ description:
   pt: GEIA é o grupo de estudos em inteligência artificial e machine learning da UFSC
 index:
   en:
-  pt: inicio.html
+  pt: index_pt
 feed:
   en: /feed.xml
   pt: /feed.xml
