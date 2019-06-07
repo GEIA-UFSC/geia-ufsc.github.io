@@ -19,6 +19,7 @@ Site header
     line-height: 56px;
     letter-spacing: -1px;
     margin-bottom: 0;
+    margin-left: 5px;
     float: left;
 
     &,
@@ -172,6 +173,13 @@ Site header
     .footer-col-3 {
         width: -webkit-calc(100% - (#{$spacing-unit} / 2));
         width:         calc(100% - (#{$spacing-unit} / 2));
+    }
+}
+
+@include media-query(1365px){
+    #presentation {
+        height: 50vh;
+        width: 100%;
     }
 }
 

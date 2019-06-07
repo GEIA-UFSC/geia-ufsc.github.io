@@ -1,33 +1,75 @@
-<header class="site-header">
 
-  <div class="wrapper">
-    <a class="site-title" href="{{ site.baseurl }}/{{ site.index[page.lang] }}">{{ site.title[page.lang] }}</a>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item site-title" href="{{ site.baseurl }}/{{ site.index[page.lang] }}">{{ site.title[page.lang] }}</a>
 
-    <nav class="site-nav">
-      <a href="#" class="menu-icon fa fa-bars">
-      </a>
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
 
-      <div class="trigger">
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-end">
         {% assign pages=site.pages | where:"lang", page.lang %}
         {% for my_page in pages %}
         {% unless my_page.category %}
         {% if my_page.title %}
-          <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+          <a class="navbar-item" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
         {% endif %}
         {% endunless %}
         {% endfor %}
-      </div>
-    </nav>
+        <div class="navbar-item">
+          <div class="buttons has-addons">
+              {% if page.ref %}
+                
+                {% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
+                {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
+                {% assign langs=pages | concat:posts %}
 
+                {% for post in langs %}
+                  
+                  {% if page.lang == post.lang %}
+                    {% capture ext %}is-info is-selected{% endcapture %}
+                  {% else %}
+                    {% capture ext %}{% endcapture %}
+                  {% endif %}
+                  
+                  <a href="{{ post.url | prepend: site.baseurl }}" class="button {{ ext }}" id="{{ post.lang }}">{{ post.lang }}</a>
+                
+                {% endfor %}
+              {% endif %}
+            </div>
+        </div>
+    </div>
   </div>
+</nav>
+  
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
 
-</header>
+    // Get all "navbar-burger" elements
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
 
-<div class="wrapper" style="text-align: right; line-height: 2em">
-  {% if page.ref %}
-  {% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
-  {% for post in posts %} <a href="{{ post.url | prepend: site.baseurl }}" class="{{ post.lang }}">{{ post.lang }}</a> {% endfor %}
-  {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
-  {% for page in pages %} <a href="{{ page.url | prepend: site.baseurl }}" class="{{ page.lang }}">{{ page.lang }}</a> {% endfor %}
-  {% endif %}
-</div>
+    // Check if there are any navbar burgers
+    if ($navbarBurgers.length > 0) {
+
+      // Add a click event on each of them
+      $navbarBurgers.forEach( el => {
+        el.addEventListener('click', () => {
+
+          // Get the target from the "data-target" attribute
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+
+          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+
+        });
+      });
+    }
+
+  });
+</script>

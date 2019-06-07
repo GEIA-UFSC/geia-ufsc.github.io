@@ -11,9 +11,9 @@ lang: en
 ---
 
 <div>
-    {% if page.medium == 'jupyter' %}
+    {% if page.medium == 'jupyter' and page.link %}
         {% include jupyter.html link=page.link %}
-    {% elsif page.medium == 'gslides' %}
+    {% elsif page.medium == 'gslides' and page.link %}
         {% include gslides.html link=page.link %}
     {% else %}
         {% include nodata.html %}
