@@ -94,7 +94,20 @@ Site header
     }
 }
 
+.filters {
+    .page-link {
+        padding-right: 12px;
+        font-weight: normal;
+    }
 
+    .is-active {
+        font-weight: bold;
+    }
+
+    .page-link:focus {
+        font-weight: bold;
+    }
+}
 
 /*
 -------------

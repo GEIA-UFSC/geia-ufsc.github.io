@@ -10,9 +10,11 @@
       <div class="trigger">
         {% assign pages=site.pages | where:"lang", page.lang %}
         {% for my_page in pages %}
-          {% if my_page.title %}
+        {% unless my_page.category %}
+        {% if my_page.title %}
           <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
-          {% endif %}
+        {% endif %}
+        {% endunless %}
         {% endfor %}
       </div>
     </nav>

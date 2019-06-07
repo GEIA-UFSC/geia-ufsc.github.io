@@ -2,7 +2,7 @@
 layout: post
 title: Developer Setup
 date: 2018-10-28 00:00:00 -0500
-categories: DevOps
+categories: [DevOps, data_science]
 author: Bruno Machado Pacheco
 medium: jupyter
 link: https://api.github.com/repos/GEIA-UFSC/dev-setup/contents/Setup.html?ref=master

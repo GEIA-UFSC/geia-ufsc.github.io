@@ -2,7 +2,7 @@
 layout: post
 title: Imbalanced learning
 date: 2018-09-10
-categories: Data Science
+categories: "data_science"
 author: Artur Back de Luca
 medium: jupyter
 url: https://api.github.com/repos/GEIA-UFSC/imbalanced-learning/contents/presentation.slides.html?ref=master

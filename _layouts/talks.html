@@ -2,10 +2,24 @@
 layout: page
 ---
 
+{% if page.category %}
+{% assign posts = site.posts | where_exp: "item", "item.categories contains  page.category" %}
+{% else %}
+{% assign posts = site.posts %}
+{% endif %}
+
+{% if page.lang == 'en' %}
+{% capture all %}All{% endcapture %}
+{% capture ext %}{% endcapture %}
+{% else %}
+{% capture all %}Todos{% endcapture %}
+{% capture ext %}pt{% endcapture %}
+{% endif %}
+
 <div>
     <div class = "columns">
         <div class = "column is-6 is-pulled-left padded is-hidden-mobile">
-            {% assign post = site.posts.first %}
+            {% assign post = posts.first %}
             <h1 class="thick-text">{{ post.title }}</h1>
             <h3><i>{{ page.given_by }}</i> {{ post.author }} </h3>
             <br>
@@ -17,6 +31,25 @@ layout: page
             <div class="columns">
                 <div class="column">
                     <h1 class="thick-text">{{ page.all_talks }}</h1>
+                    <div class="filters">
+                            {% unless page.category %}
+                                <a class="page-link is-active" href="{{ site.baseurl | prepend: url }}/talks/{{ ext }}">{{ all }}</a>
+                            {% else %}
+                                <a class="page-link" href="{{ site.baseurl | prepend: url }}/talks/{{ ext }}">{{ all }}</a>
+                            {% endunless %}
+                            {% for category in site.categories %}
+                                {% capture category_0 %}{{ category | first }}{% endcapture %}
+                                {% if page.category == category_0 %}
+                                    <a class="page-link is-active" href="{{ site.baseurl | prepend: url }}/talks/{{ category | first | prepend: site.baseurl }}/{{ ext }}">
+                                        {{ category_0 | replace: '_', ' ' | capitalize_all}}
+                                    </a>
+                                {% else %}
+                                    <a class="page-link" href="{{ site.baseurl | prepend: url }}/talks/{{ category | first | prepend: site.baseurl }}/{{ ext }}">
+                                        {{ category_0 | replace: '_', ' ' | capitalize_all }}
+                                    </a>
+                                {% endif %}
+                            {% endfor %}
+                    </div>
                 </div>
                 <div class="column is-2" style="display:flex">
                     <div class="has-text-centered" style="width:100%; align-self:center">
@@ -27,7 +60,7 @@ layout: page
             <div class = "scrollable-parent">
                 <div class = "scrollable-child">
                     <ul style="padding-bottom: 50px; margin-bottom: 50px;">
-                        {% for post in site.posts %}
+                        {% for post in posts %}
                         <li>
                             <h2><a href="{{ post.url | prepend: site.baseurl }}">
                                 {% if post.video %}
