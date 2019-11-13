@@ -20,10 +20,11 @@ feed:
   en: /feed.xml
   pt: /feed.xml
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://geia-ufsc.github.io" # the base hostname & protocol for your site
+url: https://geia-ufsc.github.io # the base hostname & protocol for your site
 telegram_link: KRVDdhN0o0Gwky2NftJ6XA
 github_username: GEIA-UFSC
-facebook: GEIA-UFSC
+facebook: UniversidadeUFSC
+email: geia-ufsc@gmail.com
   
 
 # Build settings

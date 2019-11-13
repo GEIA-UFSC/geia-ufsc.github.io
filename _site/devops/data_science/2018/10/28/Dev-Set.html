@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Developer Setup</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="http://use.fontawesome.com/releases/v5.0.6/css/all.css">
+  
+  <link rel="canonical" href="http://localhost:4000/devops/data_science/2018/10/28/Dev-Set.html">
+  
+  
+  <link rel="alternate" hreflang="en" href="/machine_learning_theory/2019/11/11/No-Free-Lunch.html" />
+  <link rel="alternate" hreflang="en" href="/machine_learning_theory/data_science/2019/08/16/Feature-Selection.html" />
+  <link rel="alternate" hreflang="en" href="/devops/data_science/2018/10/28/Dev-Set.html" />
+  <link rel="alternate" hreflang="en" href="/data_science/2018/09/10/Imb-Lea.html" />
+  
+  
+  <link rel="alternate" hreflang="" href="/css/main.css" />
+  <link rel="alternate" hreflang="" href="/sitemaps.xml" />
+  <link rel="alternate" hreflang="en" href="/feed.xml" />
+  <link rel="alternate" hreflang="en" href="/talks/DevOps/" />
+  <link rel="alternate" hreflang="en" href="/talks/machine_learning_theory/" />
+  <link rel="alternate" hreflang="en" href="/talks/data_science/" />
+  <link rel="alternate" hreflang="en" href="/talks/" />
+  <link rel="alternate" hreflang="en" href="/" />
+  <link rel="alternate" hreflang="pt" href="/talks/DevOps/pt.html" />
+  <link rel="alternate" hreflang="pt" href="/talks/machine_learning_theory/pt.html" />
+  <link rel="alternate" hreflang="pt" href="/talks/data_science/pt.html" />
+  <link rel="alternate" hreflang="pt" href="/talks/pt.html" />
+  <link rel="alternate" hreflang="pt" href="/pt.html" />
+  
+  <link rel="alternate" type="application/rss+xml" title="GEIA @UFSC" href="http://localhost:4000/feed.xml">
+</head>
+
+  <body>
+
+    
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item site-title" href="/">GEIA @UFSC</a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasic" class="navbar-menu">
+    <div class="navbar-end">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+          <a class="navbar-item" href="/talks/">talks</a>
+        
+        
+        
+        
+        
+        
+        
+        <div class="navbar-item">
+          <div class="buttons has-addons">
+              
+            </div>
+        </div>
+    </div>
+  </div>
+</nav>
+  
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+
+    // Get all "navbar-burger" elements
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+    // Check if there are any navbar burgers
+    if ($navbarBurgers.length > 0) {
+
+      // Add a click event on each of them
+      $navbarBurgers.forEach( el => {
+        el.addEventListener('click', () => {
+
+          // Get the target from the "data-target" attribute
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+
+          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+
+        });
+      });
+    }
+
+  });
+</script>
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Developer Setup</h1>
+    <p class="post-meta"><time datetime="2018-10-28T06:00:00+01:00" itemprop="datePublished">Oct 28, 2018</time> • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Bruno Machado Pacheco</span></span></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <div>
+    
+        <iframe id="presentation" frameborder="1" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<script>
+    var request = new XMLHttpRequest();
+    request.open("GET", "https://api.github.com/repos/GEIA-UFSC/dev-setup/contents/Setup.html?ref=master");
+    request.send(null);
+    request.onreadystatechange = function() {
+    if (request.readyState == 4)
+        iframe=document.getElementById('presentation');
+        iframe.src="data:text/html;base64,"+JSON.parse(request.responseText).content;;
+    };
+</script>
+    
+</div>
+
+  </div>
+
+</article>
+
+      </div>
+      <div class="push"></div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+
+      <div class="footer-col">
+        <ul class="social-media-list">
+          
+          
+          <li display="inline-block">
+              <a href="https://github.com/GEIA-UFSC"><span class="fab fa-github"></span></a>
+          </li>
+          
+
+          
+          <li display="inline-block">
+              <a href="https://t.me/joinchat/KRVDdhN0o0Gwky2NftJ6XA"><span class="fab fa-telegram-plane"></span></a>
+          </li>
+          
+
+          
+          <li display="inline-block">
+            <a href="https://facebook.com/UniversidadeUFSC"><span class="fab fa-facebook"></span></a>
+          </li>
+          
+
+          
+          <li display="inline-block">
+            <a href="mailto:geia-ufsc@gmail.com"><span class="fa fa-envelope"></span></a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+  </body>
+
+</html>

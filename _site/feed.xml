@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GEIA @UFSC</title>
+    <description>GEIA is the artificial intelligence and machine learning club at UFSC</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 13 Nov 2019 16:36:27 +0100</pubDate>
+    <lastBuildDate>Wed, 13 Nov 2019 16:36:27 +0100</lastBuildDate>
+    <generator>Jekyll v3.8.5</generator>
+    
+    
+      <item>
+        <title>No free lunch theorems</title>
+        <description>&lt;div&gt;
+    
+        &lt;iframe id=&quot;presentation&quot; frameborder=&quot;1&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
+&lt;script&gt;
+    var request = new XMLHttpRequest();
+    request.open(&quot;GET&quot;, &quot;https://api.github.com/repos/GEIA-UFSC/no-free-lunch-theorems-talk/contents/No%20Free%20Lunch%20Theorems.slides.html?ref=master&quot;);
+    request.send(null);
+    request.onreadystatechange = function() {
+    if (request.readyState == 4)
+        iframe=document.getElementById('presentation');
+        iframe.src=&quot;data:text/html;base64,&quot;+JSON.parse(request.responseText).content;;
+    };
+&lt;/script&gt;
+    
+&lt;/div&gt;
+</description>
+        <pubDate>Mon, 11 Nov 2019 00:00:00 +0100</pubDate>
+        <link>http://localhost:4000/machine_learning_theory/2019/11/11/No-Free-Lunch.html</link>
+        <guid isPermaLink="true">http://localhost:4000/machine_learning_theory/2019/11/11/No-Free-Lunch.html</guid>
+        
+        
+        <category>machine_learning_theory</category>
+        
+      </item>
+    
+      <item>
+        <title>Feature Selection</title>
+        <description>&lt;div&gt;
+    
+        &lt;iframe id=&quot;presentation&quot; frameborder=&quot;1&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
+&lt;script&gt;
+    var request = new XMLHttpRequest();
+    request.open(&quot;GET&quot;, &quot;https://api.github.com/repos/GEIA-UFSC/feature_selection/contents/presentation.slides.html?ref=master&quot;);
+    request.send(null);
+    request.onreadystatechange = function() {
+    if (request.readyState == 4)
+        iframe=document.getElementById('presentation');
+        iframe.src=&quot;data:text/html;base64,&quot;+JSON.parse(request.responseText).content;;
+    };
+&lt;/script&gt;
+    
+&lt;/div&gt;
+</description>
+        <pubDate>Fri, 16 Aug 2019 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/machine_learning_theory/data_science/2019/08/16/Feature-Selection.html</link>
+        <guid isPermaLink="true">http://localhost:4000/machine_learning_theory/data_science/2019/08/16/Feature-Selection.html</guid>
+        
+        
+        <category>machine_learning_theory</category>
+        
+        <category>data_science</category>
+        
+      </item>
+    
+      <item>
+        <title>Developer Setup</title>
+        <description>&lt;div&gt;
+    
+        &lt;iframe id=&quot;presentation&quot; frameborder=&quot;1&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
+&lt;script&gt;
+    var request = new XMLHttpRequest();
+    request.open(&quot;GET&quot;, &quot;https://api.github.com/repos/GEIA-UFSC/dev-setup/contents/Setup.html?ref=master&quot;);
+    request.send(null);
+    request.onreadystatechange = function() {
+    if (request.readyState == 4)
+        iframe=document.getElementById('presentation');
+        iframe.src=&quot;data:text/html;base64,&quot;+JSON.parse(request.responseText).content;;
+    };
+&lt;/script&gt;
+    
+&lt;/div&gt;
+</description>
+        <pubDate>Sun, 28 Oct 2018 06:00:00 +0100</pubDate>
+        <link>http://localhost:4000/devops/data_science/2018/10/28/Dev-Set.html</link>
+        <guid isPermaLink="true">http://localhost:4000/devops/data_science/2018/10/28/Dev-Set.html</guid>
+        
+        
+        <category>DevOps</category>
+        
+        <category>data_science</category>
+        
+      </item>
+    
+      <item>
+        <title>Imbalanced learning</title>
+        <description>&lt;div&gt;
+    
+        &lt;iframe id=&quot;presentation&quot; frameborder=&quot;1&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
+&lt;script&gt;
+    var request = new XMLHttpRequest();
+    request.open(&quot;GET&quot;, &quot;https://api.github.com/repos/GEIA-UFSC/imbalanced-learning/contents/presentation.slides.html?ref=master&quot;);
+    request.send(null);
+    request.onreadystatechange = function() {
+    if (request.readyState == 4)
+        iframe=document.getElementById('presentation');
+        iframe.src=&quot;data:text/html;base64,&quot;+JSON.parse(request.responseText).content;;
+    };
+&lt;/script&gt;
+    
+&lt;/div&gt;
+</description>
+        <pubDate>Mon, 10 Sep 2018 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/data_science/2018/09/10/Imb-Lea.html</link>
+        <guid isPermaLink="true">http://localhost:4000/data_science/2018/09/10/Imb-Lea.html</guid>
+        
+        
+        <category>data_science</category>
+        
+      </item>
+    
+  </channel>
+</rss>
